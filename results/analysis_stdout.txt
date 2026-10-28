@@ -1,0 +1,40 @@
+
+== main_hotpotqa (n=100)
+Full eager     F1 43.9 [35.9, 52.1] | EM 37.0 [28.7, 45.7] | worstF1 31.1 [22.8, 39.8] | dis 52.0 [42.0, 62.0] | inst 21.0 [13.0, 29.0] | A-first=43.4 B-first=44.9 Both-captured=43.4
+Evidence-only  F1 44.2 [35.9, 52.3] | EM 36.7 [28.3, 45.3] | worstF1 32.8 [24.3, 41.5] | dis 48.0 [38.0, 58.0] | inst 18.0 [11.0, 26.0] | A-first=42.5 B-first=46.6 Both-captured=43.4
+Isolation      F1 43.4 [34.7, 52.7] | EM 35.0 [26.0, 44.0] | worstF1 43.4 [34.5, 52.6] | dis 0.0 [0.0, 0.0] | inst 0.0 [0.0, 0.0] | A-first=43.4 B-first=43.4 Both-captured=43.4
+  full-isolation             dF1 0.5 [-3.0, 4.1] dEM 2.0 [-1.3, 5.7] dWorstF1 -12.4 [-18.7, -6.7] dDis 52.0 [42.0, 62.0]
+  evidence_only-isolation    dF1 0.7 [-2.6, 4.3] dEM 1.7 [-1.7, 5.0] dWorstF1 -10.7 [-16.7, -5.5] dDis 48.0 [38.0, 58.0]
+  full-evidence_only         dF1 -0.3 [-3.1, 2.6] dEM 0.3 [-2.7, 3.3] dWorstF1 -1.7 [-7.8, 4.2] dDis 4.0 [-5.0, 13.0]
+  flips {"full/a_first": [8, 6], "full/b_first": [7, 3], "evidence_only/a_first": [8, 6], "evidence_only/b_first": [5, 2]}
+  influence {"full": {"later_analyst_changed": [0.56, 0.485, 0.635], "later_adopted_peer": [0.195, 0.135, 0.26], "n_runs": 200}, "evidence_only": {"later_analyst_changed": [0.46, 0.39, 0.53], "later_adopted_peer": [0.095, 0.055, 0.14], "n_runs": 200}, "adoption_full_minus_evidence_only": [0.1, 0.04, 0.165]}
+  cost {"full": {"logical_calls": 900, "unique_calls": 697, "in_tokens_per_q": 7485.97, "out_tokens_per_q": 562.3, "logical_gen_seconds_per_q": 38.153606518011074, "unique_gen_seconds_per_q": 26.981235424011246, "invalid_reports": 0, "findings_missing_ids": 121, "missing_final": 0, "invalid_support_ids": 2, "over_budget": 0}, "evidence_only": {"logical_calls": 900, "unique_calls": 697, "in_tokens_per_q": 7472.15, "out_tokens_per_q": 565.06, "logical_gen_seconds_per_q": 38.30454321001307, "unique_gen_seconds_per_q": 27.13894330001436, "invalid_reports": 0, "findings_missing_ids": 119, "missing_final": 0, "invalid_support_ids": 2, "over_budget": 0}, "isolation": {"logical_calls": 900, "unique_calls": 300, "in_tokens_per_q": 7334.28, "out_tokens_per_q": 570.63, "logical_gen_seconds_per_q": 38.586486389993226, "unique_gen_seconds_per_q": 12.862162129997742, "invalid_reports": 0, "findings_missing_ids": 126, "missing_final": 0, "invalid_support_ids": 3, "over_budget": 0}}
+
+== main_musique (n=50)
+Full eager     F1 21.8 [13.2, 31.4] | EM 16.0 [8.0, 25.3] | worstF1 11.1 [3.8, 20.0] | dis 66.0 [52.0, 78.0] | inst 16.0 [6.0, 26.0] | A-first=22.7 B-first=18.4 Both-captured=24.2
+Evidence-only  F1 20.4 [12.2, 29.2] | EM 14.0 [6.7, 22.7] | worstF1 9.6 [3.1, 17.3] | dis 66.0 [52.0, 78.0] | inst 16.0 [6.0, 26.0] | A-first=21.8 B-first=15.2 Both-captured=24.2
+Isolation      F1 24.2 [14.0, 35.1] | EM 16.0 [6.0, 26.0] | worstF1 24.2 [14.1, 35.3] | dis 0.0 [0.0, 0.0] | inst 0.0 [0.0, 0.0] | A-first=24.2 B-first=24.2 Both-captured=24.2
+  full-isolation             dF1 -2.4 [-6.3, 1.4] dEM -0.0 [-4.0, 4.0] dWorstF1 -13.1 [-21.5, -5.7] dDis 66.0 [54.0, 78.0]
+  evidence_only-isolation    dF1 -3.8 [-8.5, 0.4] dEM -2.0 [-6.7, 2.0] dWorstF1 -14.6 [-23.4, -6.7] dDis 66.0 [52.0, 78.0]
+  full-evidence_only         dF1 1.4 [-1.7, 4.5] dEM 2.0 [-0.7, 4.7] dWorstF1 1.5 [-4.5, 8.0] dDis 0.0 [-10.0, 10.0]
+  flips {"full/a_first": [3, 2], "full/b_first": [1, 2], "evidence_only/a_first": [2, 2], "evidence_only/b_first": [1, 4]}
+  influence {"full": {"later_analyst_changed": [0.58, 0.46, 0.69], "later_adopted_peer": [0.21, 0.13, 0.3], "n_runs": 100}, "evidence_only": {"later_analyst_changed": [0.51, 0.43, 0.6], "later_adopted_peer": [0.11, 0.06, 0.17], "n_runs": 100}, "adoption_full_minus_evidence_only": [0.1, 0.03, 0.17]}
+  cost {"full": {"logical_calls": 450, "unique_calls": 350, "in_tokens_per_q": 9895.02, "out_tokens_per_q": 495.26, "logical_gen_seconds_per_q": 36.736491115982645, "unique_gen_seconds_per_q": 25.58984469998628, "invalid_reports": 0, "findings_missing_ids": 91, "missing_final": 0, "invalid_support_ids": 0, "over_budget": 0}, "evidence_only": {"logical_calls": 450, "unique_calls": 350, "in_tokens_per_q": 9886.02, "out_tokens_per_q": 505.98, "logical_gen_seconds_per_q": 37.40653442598181, "unique_gen_seconds_per_q": 26.259888009985442, "invalid_reports": 0, "findings_missing_ids": 83, "missing_final": 0, "invalid_support_ids": 0, "over_budget": 0}, "isolation": {"logical_calls": 450, "unique_calls": 150, "in_tokens_per_q": 9765.06, "out_tokens_per_q": 509.94, "logical_gen_seconds_per_q": 37.55450068798615, "unique_gen_seconds_per_q": 12.518166895995382, "invalid_reports": 0, "findings_missing_ids": 69, "missing_final": 0, "invalid_support_ids": 0, "over_budget": 0}}
+
+== repeat control
+{
+ "n_questions": 20,
+ "identical_condition_answer_diff_rate": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "identical_condition_any_diff": 0.0,
+ "identical_condition_em_flip_rate": 0.0,
+ "raw_output_diff_rate": 0.0,
+ "cross_schedule_disagreement_same_qs": [
+  0.5,
+  0.3,
+  0.7
+ ]
+}

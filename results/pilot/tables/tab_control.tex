@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Content versus presence. The irrelevant-peer control shows the later analyst a real report written for a different question, with the same timing as full sharing. Adoption: the later analyst switches to the answer in the report it was shown, among cases where its no-peer answer differed.}
+\label{tab:control}
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llccccc}
+\toprule
+Model & Data & \multicolumn{2}{c}{Dis.\ (\%)} & \multicolumn{3}{c}{Later analyst adopts shown answer (\%)} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-7}
+ & & Full & Irrelevant & Full & Evid.-only & Irrelevant \\
+\midrule
+\multirow{3}{*}{Llama-3-8B} & HotpotQA & 40.0 & 40.0 & 20.0 & 0.0 & 5.0 \\
+ & MuSiQue & 80.0 & 80.0 & 10.0 & 0.0 & 0.0 \\
+ & 2Wiki & 40.0 & 20.0 & 15.0 & 20.0 & 0.0 \\
+\midrule
+\multirow{3}{*}{Qwen2.5-7B} & HotpotQA & 40.0 & 40.0 & 40.0 & 20.0 & 10.0 \\
+ & MuSiQue & 100.0 & 100.0 & 30.0 & 20.0 & 0.0 \\
+ & 2Wiki & 20.0 & 20.0 & 20.0 & 10.0 & 15.0 \\
+\bottomrule
+\end{tabular}}
+\end{table}

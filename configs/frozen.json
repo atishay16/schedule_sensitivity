@@ -1,0 +1,13 @@
+{
+ "models": {
+  "llama3-8b": "unsloth/llama-3-8b-Instruct-bnb-4bit",
+  "qwen2.5-7b": "unsloth/Qwen2.5-7B-Instruct-bnb-4bit"
+ },
+ "max_input": 3500,
+ "analyst_out": 256,
+ "final_out": 128,
+ "single_max_input": 6000,
+ "decoding": "greedy",
+ "frozen": true,
+ "frozen_note": "Prompts, budgets, parser and decoding are identical for every model, dataset and condition."
+}

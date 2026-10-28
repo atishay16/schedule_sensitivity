@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Reference points. Single: one call reading all evidence. Iso.: the two-analyst workflow under isolation. Repeat diff.: share of calls whose raw output differed when an identical condition was re-executed without response reuse (number of calls in parentheses), versus cross-schedule disagreement on the same questions.}
+\label{tab:baseline}
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llccccc}
+\toprule
+Model & Data & Single F1 & Iso.\ F1 & $\Delta$ Iso.$-$Single & Repeat diff.\ (\%) & Cross-sched.\ Dis.\ (\%) \\
+\midrule
+\multirow{3}{*}{Llama-3-8B} & HotpotQA & 20.7 & 62.1 & +41.4 {\tiny[11.4, 71.4]} & -- & -- \\
+ & MuSiQue & 18.0 & 41.3 & +23.3 {\tiny[0.0, 63.3]} & -- & -- \\
+ & 2Wiki & 40.0 & 70.0 & +30.0 {\tiny[6.7, 56.7]} & -- & -- \\
+\midrule
+\multirow{3}{*}{Qwen2.5-7B} & HotpotQA & 76.7 & 70.0 & $-$6.7 {\tiny[$-$40.0, 26.7]} & -- & -- \\
+ & MuSiQue & 0.0 & 20.0 & +20.0 {\tiny[0.0, 60.0]} & -- & -- \\
+ & 2Wiki & 60.0 & 46.7 & $-$13.3 {\tiny[$-$36.7, 0.0]} & -- & -- \\
+\bottomrule
+\end{tabular}}
+\end{table}

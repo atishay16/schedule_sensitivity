@@ -1,0 +1,2970 @@
+{
+ "llama3-8b": {
+  "hotpotqa": {
+   "n_questions": 10,
+   "policies": {
+    "full": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.5,
+       "b_first": 0.7,
+       "both_captured": 0.6
+      },
+      "sched_avg": [
+       0.6,
+       0.3333333333333333,
+       0.8666666666666666
+      ],
+      "worst_schedule": [
+       0.5,
+       0.2,
+       0.8
+      ],
+      "best_schedule": 0.7
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.5,
+       "b_first": 0.7210526315789474,
+       "both_captured": 0.6210526315789473
+      },
+      "sched_avg": [
+       0.6140350877192982,
+       0.34210526315789475,
+       0.8666666666666668
+      ],
+      "worst_schedule": [
+       0.5,
+       0.2,
+       0.8
+      ],
+      "best_schedule": 0.7210526315789474
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.41833333333333333,
+       "b_first": 0.5022222222222222,
+       "both_captured": 0.39499999999999996
+      },
+      "sched_avg": [
+       0.43851851851851853,
+       0.3266574074074074,
+       0.5544444444444444
+      ],
+      "worst_schedule": [
+       0.31555555555555553,
+       0.18666666666666668,
+       0.44000000000000006
+      ],
+      "best_schedule": 0.5549999999999999
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.215,
+       "b_first": 0.40343434343434337,
+       "both_captured": 0.25611111111111107
+      },
+      "sched_avg": [
+       0.2915151515151515,
+       0.16605892255892257,
+       0.41999999999999993
+      ],
+      "worst_schedule": [
+       0.1922222222222222,
+       0.05555555555555556,
+       0.33999999999999997
+      ],
+      "best_schedule": 0.40621212121212114
+     },
+     "disagreement": [
+      0.4,
+      0.1,
+      0.7
+     ],
+     "em_instability": [
+      0.2,
+      0.0,
+      0.5
+     ]
+    },
+    "evidence_only": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.7,
+       "b_first": 0.7,
+       "both_captured": 0.6
+      },
+      "sched_avg": [
+       0.6666666666666666,
+       0.36666666666666664,
+       0.9333333333333332
+      ],
+      "worst_schedule": [
+       0.6,
+       0.3,
+       0.9
+      ],
+      "best_schedule": 0.7
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.7210526315789474,
+       "b_first": 0.7210526315789474,
+       "both_captured": 0.6210526315789473
+      },
+      "sched_avg": [
+       0.6877192982456141,
+       0.4209649122807018,
+       0.9210526315789475
+      ],
+      "worst_schedule": [
+       0.6210526315789473,
+       0.32105263157894737,
+       0.9
+      ],
+      "best_schedule": 0.7210526315789474
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.35023809523809524,
+       "b_first": 0.46025252525252525,
+       "both_captured": 0.39499999999999996
+      },
+      "sched_avg": [
+       0.4018302068302068,
+       0.2728594276094276,
+       0.5262962962962963
+      ],
+      "worst_schedule": [
+       0.3238888888888889,
+       0.18722222222222223,
+       0.4683333333333334
+      ],
+      "best_schedule": 0.4749999999999999
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.26134920634920633,
+       "b_first": 0.3614646464646465,
+       "both_captured": 0.25611111111111107
+      },
+      "sched_avg": [
+       0.292974987974988,
+       0.1698996512746513,
+       0.41537950937950935
+      ],
+      "worst_schedule": [
+       0.185,
+       0.06944444444444445,
+       0.3244583333333331
+      ],
+      "best_schedule": 0.3762121212121212
+     },
+     "disagreement": [
+      0.2,
+      0.0,
+      0.5
+     ],
+     "em_instability": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "isolation": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.6,
+       "b_first": 0.6,
+       "both_captured": 0.6
+      },
+      "sched_avg": [
+       0.6,
+       0.3,
+       0.9
+      ],
+      "worst_schedule": [
+       0.6,
+       0.3,
+       0.9
+      ],
+      "best_schedule": 0.6
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.6210526315789473,
+       "b_first": 0.6210526315789473,
+       "both_captured": 0.6210526315789473
+      },
+      "sched_avg": [
+       0.6210526315789473,
+       0.32105263157894737,
+       0.9
+      ],
+      "worst_schedule": [
+       0.6210526315789473,
+       0.32105263157894737,
+       0.9
+      ],
+      "best_schedule": 0.6210526315789473
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.39499999999999996,
+       "b_first": 0.39499999999999996,
+       "both_captured": 0.39499999999999996
+      },
+      "sched_avg": [
+       0.39499999999999996,
+       0.26333333333333336,
+       0.5166666666666666
+      ],
+      "worst_schedule": [
+       0.39499999999999996,
+       0.26833333333333337,
+       0.5166666666666666
+      ],
+      "best_schedule": 0.39499999999999996
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.25611111111111107,
+       "b_first": 0.25611111111111107,
+       "both_captured": 0.25611111111111107
+      },
+      "sched_avg": [
+       0.2561111111111111,
+       0.12222222222222223,
+       0.39999999999999997
+      ],
+      "worst_schedule": [
+       0.25611111111111107,
+       0.11666666666666665,
+       0.39499999999999996
+      ],
+      "best_schedule": 0.25611111111111107
+     },
+     "disagreement": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "em_instability": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "paired": {
+    "full-isolation": {
+     "f1": [
+      -0.007017543859649128,
+      -0.1,
+      0.09298245614035087
+     ],
+     "em": [
+      -5.551115123125783e-18,
+      -0.1,
+      0.1
+     ],
+     "worst_f1": [
+      -0.12105263157894737,
+      -0.32105263157894737,
+      0.0
+     ],
+     "disagreement": [
+      0.4,
+      0.1,
+      0.7
+     ]
+    },
+    "evidence_only-isolation": {
+     "f1": [
+      0.06666666666666667,
+      0.0,
+      0.2
+     ],
+     "em": [
+      0.06666666666666667,
+      0.0,
+      0.2
+     ],
+     "worst_f1": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "disagreement": [
+      0.2,
+      0.0,
+      0.5
+     ]
+    },
+    "full-evidence_only": {
+     "f1": [
+      -0.0736842105263158,
+      -0.16666666666666669,
+      0.0
+     ],
+     "em": [
+      -0.06666666666666668,
+      -0.16666666666666669,
+      0.0
+     ],
+     "worst_f1": [
+      -0.12105263157894737,
+      -0.32105263157894737,
+      0.0
+     ],
+     "disagreement": [
+      0.2,
+      0.0,
+      0.5
+     ]
+    }
+   },
+   "flips_vs_no_peer": {
+    "full/a_first": {
+     "gain": 0,
+     "loss": 1,
+     "f1_delta": [
+      -0.12105263157894737,
+      -0.32105263157894737,
+      0.0
+     ]
+    },
+    "full/b_first": {
+     "gain": 1,
+     "loss": 0,
+     "f1_delta": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "evidence_only/a_first": {
+     "gain": 1,
+     "loss": 0,
+     "f1_delta": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "evidence_only/b_first": {
+     "gain": 1,
+     "loss": 0,
+     "f1_delta": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    }
+   },
+   "irrelevant": {
+    "f1_sched_avg": [
+     0.6077192982456141,
+     0.3421052631578947,
+     0.8533333333333333
+    ],
+    "per_schedule": {
+     "a_first": 0.4810526315789474,
+     "b_first": 0.7210526315789474,
+     "both_captured": 0.6210526315789473
+    },
+    "disagreement": [
+     0.4,
+     0.1,
+     0.7
+    ],
+    "em_instability": [
+     0.3,
+     0.0,
+     0.6
+    ],
+    "full_minus_irrelevant_disagreement": [
+     0.0,
+     -0.3,
+     0.3
+    ],
+    "full_minus_irrelevant_f1": [
+     0.006315789473684208,
+     -0.06105263157894738,
+     0.09298245614035089
+    ],
+    "irrelevant_minus_isolation_f1": [
+     -0.013333333333333336,
+     -0.11333333333333333,
+     0.08666666666666667
+    ]
+   },
+   "analyst_influence": {
+    "full": {
+     "changed": [
+      0.55,
+      0.3,
+      0.8
+     ],
+     "adopted": [
+      0.2,
+      0.0,
+      0.45
+     ]
+    },
+    "evidence_only": {
+     "changed": [
+      0.4,
+      0.2,
+      0.6
+     ],
+     "adopted": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "irrelevant": {
+     "changed": [
+      0.4,
+      0.15,
+      0.7
+     ],
+     "adopted": [
+      0.05,
+      0.0,
+      0.15
+     ]
+    },
+    "adoption_full_minus_evidence_only": [
+     0.2,
+     0.0,
+     0.4
+    ],
+    "changed_full_minus_irrelevant": [
+     0.15,
+     -0.1,
+     0.45
+    ]
+   },
+   "single_agent": {
+    "em": [
+     0.2,
+     0.0,
+     0.5
+    ],
+    "f1": [
+     0.20666666666666664,
+     0.0,
+     0.5
+    ],
+    "sp_f1": [
+     0.30666666666666664,
+     0.13999999999999999,
+     0.47000000000000003
+    ],
+    "isolation_minus_single_f1": [
+     0.4143859649122807,
+     0.1143859649122807,
+     0.7143859649122807
+    ],
+    "full_minus_single_f1": [
+     0.40736842105263155,
+     0.1407017543859649,
+     0.6814035087719298
+    ],
+    "missing": 0,
+    "in_tokens": 1861.2
+   },
+   "cost": {
+    "full": {
+     "in_tokens_per_run": 2611.133333333333,
+     "out_tokens_per_run": 178.76666666666668,
+     "gen_seconds_per_run": 13.302826963326273,
+     "unique_calls_per_q": 6.8,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 3,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "evidence_only": {
+     "in_tokens_per_run": 2605.9,
+     "out_tokens_per_run": 182.36666666666667,
+     "gen_seconds_per_run": 13.529608363336108,
+     "unique_calls_per_q": 6.8,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 4,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "isolation": {
+     "in_tokens_per_run": 2566.2,
+     "out_tokens_per_run": 183.8,
+     "gen_seconds_per_run": 13.748501489998308,
+     "unique_calls_per_q": 3.0,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 3,
+     "missing_final": 0,
+     "over_budget": 0
+    }
+   }
+  },
+  "musique": {
+   "n_questions": 5,
+   "policies": {
+    "full": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.0,
+       "b_first": 0.2,
+       "both_captured": 0.2
+      },
+      "sched_avg": [
+       0.13333333333333333,
+       0.0,
+       0.26666666666666666
+      ],
+      "worst_schedule": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "best_schedule": 0.4
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.23686274509803923,
+       "b_first": 0.2,
+       "both_captured": 0.4133333333333333
+      },
+      "sched_avg": [
+       0.2833986928104575,
+       0.06901960784313725,
+       0.5411764705882353
+      ],
+      "worst_schedule": [
+       0.13333333333333333,
+       0.0,
+       0.4
+      ],
+      "best_schedule": 0.5035294117647059
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.7,
+       "b_first": 0.5333333333333333,
+       "both_captured": 0.6666666666666666
+      },
+      "sched_avg": [
+       0.6333333333333333,
+       0.4,
+       0.8555555555555555
+      ],
+      "worst_schedule": [
+       0.5333333333333333,
+       0.2333333333333333,
+       0.8
+      ],
+      "best_schedule": 0.7999999999999999
+     },
+     "disagreement": [
+      0.8,
+      0.4,
+      1.0
+     ],
+     "em_instability": [
+      0.4,
+      0.0,
+      0.8
+     ]
+    },
+    "evidence_only": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.0,
+       "b_first": 0.6,
+       "both_captured": 0.2
+      },
+      "sched_avg": [
+       0.26666666666666666,
+       0.06666666666666667,
+       0.4666666666666667
+      ],
+      "worst_schedule": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "best_schedule": 0.6
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.3410526315789474,
+       "b_first": 0.6,
+       "both_captured": 0.4133333333333333
+      },
+      "sched_avg": [
+       0.4514619883040935,
+       0.14736842105263157,
+       0.7555555555555554
+      ],
+      "worst_schedule": [
+       0.21333333333333332,
+       0.0,
+       0.48
+      ],
+      "best_schedule": 0.6210526315789473
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.7,
+       "b_first": 0.6666666666666666,
+       "both_captured": 0.6666666666666666
+      },
+      "sched_avg": [
+       0.6777777777777778,
+       0.4333333333333333,
+       0.9
+      ],
+      "worst_schedule": [
+       0.5666666666666667,
+       0.26666666666666666,
+       0.8333333333333333
+      ],
+      "best_schedule": 0.7999999999999999
+     },
+     "disagreement": [
+      0.8,
+      0.4,
+      1.0
+     ],
+     "em_instability": [
+      0.6,
+      0.2,
+      1.0
+     ]
+    },
+    "isolation": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.2,
+       "b_first": 0.2,
+       "both_captured": 0.2
+      },
+      "sched_avg": [
+       0.2,
+       0.0,
+       0.6
+      ],
+      "worst_schedule": [
+       0.2,
+       0.0,
+       0.6
+      ],
+      "best_schedule": 0.2
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.4133333333333333,
+       "b_first": 0.4133333333333333,
+       "both_captured": 0.4133333333333333
+      },
+      "sched_avg": [
+       0.4133333333333333,
+       0.08000000000000002,
+       0.7466666666666667
+      ],
+      "worst_schedule": [
+       0.4133333333333333,
+       0.08,
+       0.76
+      ],
+      "best_schedule": 0.4133333333333333
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.6666666666666666,
+       "b_first": 0.6666666666666666,
+       "both_captured": 0.6666666666666666
+      },
+      "sched_avg": [
+       0.6666666666666666,
+       0.3333333333333333,
+       0.9333333333333332
+      ],
+      "worst_schedule": [
+       0.6666666666666666,
+       0.3333333333333333,
+       0.9333333333333332
+      ],
+      "best_schedule": 0.6666666666666666
+     },
+     "disagreement": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "em_instability": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "paired": {
+    "full-isolation": {
+     "f1": [
+      -0.12993464052287587,
+      -0.4044444444444445,
+      0.06013071895424833
+     ],
+     "em": [
+      -0.06666666666666668,
+      -0.4,
+      0.2
+     ],
+     "worst_f1": [
+      -0.27999999999999997,
+      -0.6799999999999999,
+      0.0
+     ],
+     "disagreement": [
+      0.8,
+      0.4,
+      1.0
+     ]
+    },
+    "evidence_only-isolation": {
+     "f1": [
+      0.0381286549707602,
+      -0.17093567251461977,
+      0.24070175438596486
+     ],
+     "em": [
+      0.06666666666666665,
+      -0.13333333333333336,
+      0.26666666666666666
+     ],
+     "worst_f1": [
+      -0.2,
+      -0.6,
+      0.0
+     ],
+     "disagreement": [
+      0.8,
+      0.4,
+      1.0
+     ]
+    },
+    "full-evidence_only": {
+     "f1": [
+      -0.16806329549363602,
+      -0.3733333333333333,
+      0.0016511867905056794
+     ],
+     "em": [
+      -0.13333333333333333,
+      -0.26666666666666666,
+      0.0
+     ],
+     "worst_f1": [
+      -0.08,
+      -0.24000000000000005,
+      0.0
+     ],
+     "disagreement": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "flips_vs_no_peer": {
+    "full/a_first": {
+     "gain": 0,
+     "loss": 1,
+     "f1_delta": [
+      -0.1764705882352941,
+      -0.6,
+      0.07058823529411765
+     ]
+    },
+    "full/b_first": {
+     "gain": 1,
+     "loss": 1,
+     "f1_delta": [
+      -0.21333333333333332,
+      -0.6399999999999999,
+      0.13333333333333336
+     ]
+    },
+    "evidence_only/a_first": {
+     "gain": 0,
+     "loss": 1,
+     "f1_delta": [
+      -0.07228070175438597,
+      -0.5789473684210527,
+      0.32
+     ]
+    },
+    "evidence_only/b_first": {
+     "gain": 2,
+     "loss": 0,
+     "f1_delta": [
+      0.18666666666666668,
+      0.0,
+      0.42666666666666664
+     ]
+    }
+   },
+   "irrelevant": {
+    "f1_sched_avg": [
+     0.382375478927203,
+     0.07586206896551724,
+     0.6888888888888889
+    ],
+    "per_schedule": {
+     "a_first": 0.33379310344827584,
+     "b_first": 0.4,
+     "both_captured": 0.4133333333333333
+    },
+    "disagreement": [
+     0.8,
+     0.4,
+     1.0
+    ],
+    "em_instability": [
+     0.6,
+     0.2,
+     1.0
+    ],
+    "full_minus_irrelevant_disagreement": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "full_minus_irrelevant_f1": [
+     -0.09897678611674554,
+     -0.30666666666666664,
+     0.00973630831643002
+    ],
+    "irrelevant_minus_isolation_f1": [
+     -0.030957854406130313,
+     -0.3777777777777778,
+     0.23126436781609194
+    ]
+   },
+   "analyst_influence": {
+    "full": {
+     "changed": [
+      0.6,
+      0.3,
+      0.9
+     ],
+     "adopted": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "evidence_only": {
+     "changed": [
+      0.7,
+      0.5,
+      0.9
+     ],
+     "adopted": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "irrelevant": {
+     "changed": [
+      0.7,
+      0.3,
+      1.0
+     ],
+     "adopted": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "adoption_full_minus_evidence_only": [
+     0.1,
+     0.0,
+     0.3
+    ],
+    "changed_full_minus_irrelevant": [
+     -0.1,
+     -0.4,
+     0.2
+    ]
+   },
+   "single_agent": {
+    "em": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "f1": [
+     0.18,
+     0.0,
+     0.38
+    ],
+    "sp_f1": [
+     0.45,
+     0.18333333333333332,
+     0.6666666666666666
+    ],
+    "isolation_minus_single_f1": [
+     0.2333333333333333,
+     1.1102230246251566e-17,
+     0.6333333333333333
+    ],
+    "full_minus_single_f1": [
+     0.10339869281045751,
+     -0.04549019607843138,
+     0.2555555555555555
+    ],
+    "missing": 0,
+    "in_tokens": 2415.4
+   },
+   "cost": {
+    "full": {
+     "in_tokens_per_run": 3130.866666666667,
+     "out_tokens_per_run": 152.13333333333333,
+     "gen_seconds_per_run": 11.706969439936803,
+     "unique_calls_per_q": 7.0,
+     "invalid_reports": 0,
+     "analyst_calls": 30,
+     "findings_missing_ids": 6,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "evidence_only": {
+     "in_tokens_per_run": 3127.3333333333335,
+     "out_tokens_per_run": 154.06666666666666,
+     "gen_seconds_per_run": 11.909030806653512,
+     "unique_calls_per_q": 7.0,
+     "invalid_reports": 0,
+     "analyst_calls": 30,
+     "findings_missing_ids": 7,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "isolation": {
+     "in_tokens_per_run": 3093.2,
+     "out_tokens_per_run": 158.6,
+     "gen_seconds_per_run": 12.27812337996438,
+     "unique_calls_per_q": 3.0,
+     "invalid_reports": 0,
+     "analyst_calls": 30,
+     "findings_missing_ids": 6,
+     "missing_final": 0,
+     "over_budget": 0
+    }
+   }
+  },
+  "2wiki": {
+   "n_questions": 10,
+   "policies": {
+    "full": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.5,
+       "b_first": 0.5,
+       "both_captured": 0.6
+      },
+      "sched_avg": [
+       0.5333333333333333,
+       0.2333333333333333,
+       0.8
+      ],
+      "worst_schedule": [
+       0.5,
+       0.2,
+       0.8
+      ],
+      "best_schedule": 0.6
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.6333333333333333,
+       "b_first": 0.6000000000000001,
+       "both_captured": 0.7000000000000001
+      },
+      "sched_avg": [
+       0.6444444444444445,
+       0.38888888888888884,
+       0.8777777777777779
+      ],
+      "worst_schedule": [
+       0.5666666666666667,
+       0.26666666666666666,
+       0.8666666666666666
+      ],
+      "best_schedule": 0.7000000000000001
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.5595238095238096,
+       "b_first": 0.5104761904761905,
+       "both_captured": 0.5061904761904762
+      },
+      "sched_avg": [
+       0.5253968253968254,
+       0.43952380952380954,
+       0.6154047619047619
+      ],
+      "worst_schedule": [
+       0.489047619047619,
+       0.39761904761904765,
+       0.5871428571428572
+      ],
+      "best_schedule": 0.5809523809523811
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.38333333333333336,
+       "b_first": 0.3490476190476191,
+       "both_captured": 0.38952380952380955
+      },
+      "sched_avg": [
+       0.37396825396825395,
+       0.21126984126984127,
+       0.5390515873015873
+      ],
+      "worst_schedule": [
+       0.31333333333333335,
+       0.13333333333333333,
+       0.49333333333333335
+      ],
+      "best_schedule": 0.4357142857142858
+     },
+     "disagreement": [
+      0.4,
+      0.1,
+      0.7
+     ],
+     "em_instability": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "evidence_only": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.5,
+       "b_first": 0.6,
+       "both_captured": 0.6
+      },
+      "sched_avg": [
+       0.5666666666666667,
+       0.26666666666666666,
+       0.8666666666666666
+      ],
+      "worst_schedule": [
+       0.5,
+       0.2,
+       0.8
+      ],
+      "best_schedule": 0.6
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.6333333333333333,
+       "b_first": 0.7000000000000001,
+       "both_captured": 0.7000000000000001
+      },
+      "sched_avg": [
+       0.6777777777777778,
+       0.4111111111111111,
+       0.9111111111111111
+      ],
+      "worst_schedule": [
+       0.6333333333333333,
+       0.3333333333333333,
+       0.8999999999999998
+      ],
+      "best_schedule": 0.7000000000000001
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.5980952380952382,
+       "b_first": 0.46571428571428575,
+       "both_captured": 0.5061904761904762
+      },
+      "sched_avg": [
+       0.5233333333333334,
+       0.43952380952380954,
+       0.6144444444444443
+      ],
+      "worst_schedule": [
+       0.44904761904761903,
+       0.3119047619047619,
+       0.5752380952380952
+      ],
+      "best_schedule": 0.5980952380952382
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.39333333333333337,
+       "b_first": 0.3823809523809524,
+       "both_captured": 0.38952380952380955
+      },
+      "sched_avg": [
+       0.38841269841269843,
+       0.2214285714285714,
+       0.5488888888888889
+      ],
+      "worst_schedule": [
+       0.32999999999999996,
+       0.16666666666666666,
+       0.5033333333333333
+      ],
+      "best_schedule": 0.429047619047619
+     },
+     "disagreement": [
+      0.3,
+      0.0,
+      0.6
+     ],
+     "em_instability": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "isolation": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.6,
+       "b_first": 0.6,
+       "both_captured": 0.6
+      },
+      "sched_avg": [
+       0.6,
+       0.3,
+       0.9
+      ],
+      "worst_schedule": [
+       0.6,
+       0.3,
+       0.9
+      ],
+      "best_schedule": 0.6
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.7000000000000001,
+       "b_first": 0.7000000000000001,
+       "both_captured": 0.7000000000000001
+      },
+      "sched_avg": [
+       0.7000000000000001,
+       0.4333333333333333,
+       0.9333333333333332
+      ],
+      "worst_schedule": [
+       0.7000000000000001,
+       0.4333333333333333,
+       0.9333333333333332
+      ],
+      "best_schedule": 0.7000000000000001
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.5061904761904762,
+       "b_first": 0.5061904761904762,
+       "both_captured": 0.5061904761904762
+      },
+      "sched_avg": [
+       0.5061904761904762,
+       0.4142857142857143,
+       0.6004761904761906
+      ],
+      "worst_schedule": [
+       0.5061904761904762,
+       0.41428571428571426,
+       0.5985714285714285
+      ],
+      "best_schedule": 0.5061904761904762
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.38952380952380955,
+       "b_first": 0.38952380952380955,
+       "both_captured": 0.38952380952380955
+      },
+      "sched_avg": [
+       0.38952380952380955,
+       0.23095238095238094,
+       0.5424047619047615
+      ],
+      "worst_schedule": [
+       0.38952380952380955,
+       0.2261904761904762,
+       0.5457261904761904
+      ],
+      "best_schedule": 0.38952380952380955
+     },
+     "disagreement": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "em_instability": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "paired": {
+    "full-isolation": {
+     "f1": [
+      -0.05555555555555556,
+      -0.14444444444444446,
+      0.0
+     ],
+     "em": [
+      -0.06666666666666668,
+      -0.2,
+      0.0
+     ],
+     "worst_f1": [
+      -0.13333333333333333,
+      -0.33333333333333337,
+      0.0
+     ],
+     "disagreement": [
+      0.4,
+      0.1,
+      0.7
+     ]
+    },
+    "evidence_only-isolation": {
+     "f1": [
+      -0.022222222222222227,
+      -0.05555555555555556,
+      0.0
+     ],
+     "em": [
+      -0.03333333333333334,
+      -0.1,
+      0.0
+     ],
+     "worst_f1": [
+      -0.06666666666666668,
+      -0.16666666666666669,
+      0.0
+     ],
+     "disagreement": [
+      0.3,
+      0.1,
+      0.6
+     ]
+    },
+    "full-evidence_only": {
+     "f1": [
+      -0.03333333333333334,
+      -0.1,
+      0.0
+     ],
+     "em": [
+      -0.03333333333333333,
+      -0.1,
+      0.0
+     ],
+     "worst_f1": [
+      -0.06666666666666667,
+      -0.2,
+      0.0
+     ],
+     "disagreement": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    }
+   },
+   "flips_vs_no_peer": {
+    "full/a_first": {
+     "gain": 0,
+     "loss": 1,
+     "f1_delta": [
+      -0.06666666666666668,
+      -0.16666666666666666,
+      0.0
+     ]
+    },
+    "full/b_first": {
+     "gain": 0,
+     "loss": 1,
+     "f1_delta": [
+      -0.1,
+      -0.3,
+      0.0
+     ]
+    },
+    "evidence_only/a_first": {
+     "gain": 0,
+     "loss": 1,
+     "f1_delta": [
+      -0.06666666666666668,
+      -0.16666666666666669,
+      0.0
+     ]
+    },
+    "evidence_only/b_first": {
+     "gain": 0,
+     "loss": 0,
+     "f1_delta": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "irrelevant": {
+    "f1_sched_avg": [
+     0.7,
+     0.4666666666666666,
+     0.9
+    ],
+    "per_schedule": {
+     "a_first": 0.7,
+     "b_first": 0.7000000000000001,
+     "both_captured": 0.7000000000000001
+    },
+    "disagreement": [
+     0.2,
+     0.0,
+     0.5
+    ],
+    "em_instability": [
+     0.2,
+     0.0,
+     0.5
+    ],
+    "full_minus_irrelevant_disagreement": [
+     0.2,
+     -0.2,
+     0.6
+    ],
+    "full_minus_irrelevant_f1": [
+     -0.05555555555555556,
+     -0.1777777777777778,
+     0.06666666666666668
+    ],
+    "irrelevant_minus_isolation_f1": [
+     -5.551115123125783e-18,
+     -0.1,
+     0.1
+    ]
+   },
+   "analyst_influence": {
+    "full": {
+     "changed": [
+      0.5,
+      0.2,
+      0.8
+     ],
+     "adopted": [
+      0.15,
+      0.0,
+      0.3
+     ]
+    },
+    "evidence_only": {
+     "changed": [
+      0.4,
+      0.15,
+      0.7
+     ],
+     "adopted": [
+      0.2,
+      0.05,
+      0.35
+     ]
+    },
+    "irrelevant": {
+     "changed": [
+      0.4,
+      0.2,
+      0.6
+     ],
+     "adopted": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "adoption_full_minus_evidence_only": [
+     -0.05,
+     -0.15,
+     0.0
+    ],
+    "changed_full_minus_irrelevant": [
+     0.1,
+     -0.15,
+     0.4
+    ]
+   },
+   "single_agent": {
+    "em": [
+     0.4,
+     0.1,
+     0.7
+    ],
+    "f1": [
+     0.4,
+     0.1,
+     0.7
+    ],
+    "sp_f1": [
+     0.5190476190476191,
+     0.3047619047619048,
+     0.7166666666666667
+    ],
+    "isolation_minus_single_f1": [
+     0.3,
+     0.06666666666666667,
+     0.5666666666666667
+    ],
+    "full_minus_single_f1": [
+     0.2444444444444444,
+     0.055555555555555546,
+     0.47777777777777775
+    ],
+    "missing": 0,
+    "in_tokens": 1000.4
+   },
+   "cost": {
+    "full": {
+     "in_tokens_per_run": 1726.1333333333334,
+     "out_tokens_per_run": 167.3,
+     "gen_seconds_per_run": 10.687247763318009,
+     "unique_calls_per_q": 7.0,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 15,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "evidence_only": {
+     "in_tokens_per_run": 1720.6333333333334,
+     "out_tokens_per_run": 168.93333333333334,
+     "gen_seconds_per_run": 10.781694820007154,
+     "unique_calls_per_q": 7.0,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 18,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "isolation": {
+     "in_tokens_per_run": 1680.3,
+     "out_tokens_per_run": 168.4,
+     "gen_seconds_per_run": 10.746603949985001,
+     "unique_calls_per_q": 3.0,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 15,
+     "missing_final": 0,
+     "over_budget": 0
+    }
+   }
+  }
+ },
+ "qwen2.5-7b": {
+  "hotpotqa": {
+   "n_questions": 10,
+   "policies": {
+    "full": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.5,
+       "b_first": 0.7,
+       "both_captured": 0.7
+      },
+      "sched_avg": [
+       0.6333333333333333,
+       0.36666666666666664,
+       0.8666666666666666
+      ],
+      "worst_schedule": [
+       0.5,
+       0.2,
+       0.8
+      ],
+      "best_schedule": 0.8
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.55,
+       "b_first": 0.7,
+       "both_captured": 0.7
+      },
+      "sched_avg": [
+       0.65,
+       0.4,
+       0.8833333333333332
+      ],
+      "worst_schedule": [
+       0.5,
+       0.2,
+       0.8
+      ],
+      "best_schedule": 0.8
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.5371428571428571,
+       "b_first": 0.5033333333333333,
+       "both_captured": 0.4644444444444445
+      },
+      "sched_avg": [
+       0.5016402116402116,
+       0.4166137566137566,
+       0.586084656084656
+      ],
+      "worst_schedule": [
+       0.33999999999999997,
+       0.19,
+       0.47000000000000003
+      ],
+      "best_schedule": 0.7004761904761905
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.325,
+       "b_first": 0.35333333333333333,
+       "both_captured": 0.37
+      },
+      "sched_avg": [
+       0.34944444444444434,
+       0.20999999999999996,
+       0.49611111111111106
+      ],
+      "worst_schedule": [
+       0.2,
+       0.05,
+       0.35
+      ],
+      "best_schedule": 0.5133333333333333
+     },
+     "disagreement": [
+      0.4,
+      0.1,
+      0.7
+     ],
+     "em_instability": [
+      0.3,
+      0.0,
+      0.6
+     ]
+    },
+    "evidence_only": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.7,
+       "b_first": 0.9,
+       "both_captured": 0.7
+      },
+      "sched_avg": [
+       0.7666666666666666,
+       0.5333333333333333,
+       1.0
+      ],
+      "worst_schedule": [
+       0.7,
+       0.4,
+       1.0
+      ],
+      "best_schedule": 0.9
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.7,
+       "b_first": 0.9,
+       "both_captured": 0.7
+      },
+      "sched_avg": [
+       0.7666666666666666,
+       0.5333333333333332,
+       1.0
+      ],
+      "worst_schedule": [
+       0.7,
+       0.4,
+       1.0
+      ],
+      "best_schedule": 0.9
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.5638095238095239,
+       "b_first": 0.575,
+       "both_captured": 0.4644444444444445
+      },
+      "sched_avg": [
+       0.5344179894179895,
+       0.4455026455026455,
+       0.6221957671957671
+      ],
+      "worst_schedule": [
+       0.355,
+       0.225,
+       0.465
+      ],
+      "best_schedule": 0.7838095238095238
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.45666666666666667,
+       "b_first": 0.55,
+       "both_captured": 0.37
+      },
+      "sched_avg": [
+       0.45888888888888885,
+       0.3244444444444444,
+       0.5822222222222222
+      ],
+      "worst_schedule": [
+       0.27999999999999997,
+       0.13999999999999999,
+       0.42000000000000004
+      ],
+      "best_schedule": 0.7266666666666667
+     },
+     "disagreement": [
+      0.2,
+      0.0,
+      0.5
+     ],
+     "em_instability": [
+      0.2,
+      0.0,
+      0.5
+     ]
+    },
+    "isolation": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.7,
+       "b_first": 0.7,
+       "both_captured": 0.7
+      },
+      "sched_avg": [
+       0.7,
+       0.4,
+       1.0
+      ],
+      "worst_schedule": [
+       0.7,
+       0.4,
+       1.0
+      ],
+      "best_schedule": 0.7
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.7,
+       "b_first": 0.7,
+       "both_captured": 0.7
+      },
+      "sched_avg": [
+       0.7,
+       0.4,
+       1.0
+      ],
+      "worst_schedule": [
+       0.7,
+       0.4,
+       1.0
+      ],
+      "best_schedule": 0.7
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.4644444444444445,
+       "b_first": 0.4644444444444445,
+       "both_captured": 0.4644444444444445
+      },
+      "sched_avg": [
+       0.4644444444444445,
+       0.3388888888888889,
+       0.5744444444444444
+      ],
+      "worst_schedule": [
+       0.4644444444444445,
+       0.33444444444444443,
+       0.5689166666666664
+      ],
+      "best_schedule": 0.4644444444444445
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.37,
+       "b_first": 0.37,
+       "both_captured": 0.37
+      },
+      "sched_avg": [
+       0.37,
+       0.2,
+       0.53
+      ],
+      "worst_schedule": [
+       0.37,
+       0.2,
+       0.53
+      ],
+      "best_schedule": 0.37
+     },
+     "disagreement": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "em_instability": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "paired": {
+    "full-isolation": {
+     "f1": [
+      -0.05,
+      -0.18333333333333335,
+      0.06666666666666667
+     ],
+     "em": [
+      -0.06666666666666668,
+      -0.23333333333333334,
+      0.06666666666666667
+     ],
+     "worst_f1": [
+      -0.2,
+      -0.5,
+      0.0
+     ],
+     "disagreement": [
+      0.4,
+      0.1,
+      0.7
+     ]
+    },
+    "evidence_only-isolation": {
+     "f1": [
+      0.06666666666666667,
+      0.0,
+      0.16666666666666666
+     ],
+     "em": [
+      0.06666666666666667,
+      0.0,
+      0.16666666666666666
+     ],
+     "worst_f1": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "disagreement": [
+      0.2,
+      0.0,
+      0.5
+     ]
+    },
+    "full-evidence_only": {
+     "f1": [
+      -0.11666666666666667,
+      -0.23333333333333334,
+      0.0
+     ],
+     "em": [
+      -0.13333333333333336,
+      -0.3,
+      0.0
+     ],
+     "worst_f1": [
+      -0.2,
+      -0.5,
+      0.0
+     ],
+     "disagreement": [
+      0.2,
+      0.0,
+      0.5
+     ]
+    }
+   },
+   "flips_vs_no_peer": {
+    "full/a_first": {
+     "gain": 0,
+     "loss": 2,
+     "f1_delta": [
+      -0.15,
+      -0.35124999999999884,
+      0.0
+     ]
+    },
+    "full/b_first": {
+     "gain": 1,
+     "loss": 1,
+     "f1_delta": [
+      0.0,
+      -0.3,
+      0.3
+     ]
+    },
+    "evidence_only/a_first": {
+     "gain": 0,
+     "loss": 0,
+     "f1_delta": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "evidence_only/b_first": {
+     "gain": 2,
+     "loss": 0,
+     "f1_delta": [
+      0.2,
+      0.0,
+      0.5
+     ]
+    }
+   },
+   "irrelevant": {
+    "f1_sched_avg": [
+     0.6766666666666666,
+     0.42666666666666664,
+     0.9133333333333333
+    ],
+    "per_schedule": {
+     "a_first": 0.6,
+     "b_first": 0.73,
+     "both_captured": 0.7
+    },
+    "disagreement": [
+     0.4,
+     0.1,
+     0.7
+    ],
+    "em_instability": [
+     0.3,
+     0.0,
+     0.6
+    ],
+    "full_minus_irrelevant_disagreement": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "full_minus_irrelevant_f1": [
+     -0.026666666666666655,
+     -0.09666666666666665,
+     0.03333333333333334
+    ],
+    "irrelevant_minus_isolation_f1": [
+     -0.023333333333333352,
+     -0.19000000000000003,
+     0.1033333333333333
+    ]
+   },
+   "analyst_influence": {
+    "full": {
+     "changed": [
+      0.45,
+      0.25,
+      0.65
+     ],
+     "adopted": [
+      0.4,
+      0.15,
+      0.65
+     ]
+    },
+    "evidence_only": {
+     "changed": [
+      0.3,
+      0.15,
+      0.45
+     ],
+     "adopted": [
+      0.2,
+      0.05,
+      0.35
+     ]
+    },
+    "irrelevant": {
+     "changed": [
+      0.3,
+      0.15,
+      0.45
+     ],
+     "adopted": [
+      0.1,
+      0.0,
+      0.25
+     ]
+    },
+    "adoption_full_minus_evidence_only": [
+     0.2,
+     0.0,
+     0.4
+    ],
+    "changed_full_minus_irrelevant": [
+     0.15,
+     0.0,
+     0.35
+    ]
+   },
+   "single_agent": {
+    "em": [
+     0.7,
+     0.4,
+     1.0
+    ],
+    "f1": [
+     0.7666666666666666,
+     0.5,
+     1.0
+    ],
+    "sp_f1": [
+     0.7233333333333334,
+     0.6033333333333334,
+     0.85
+    ],
+    "isolation_minus_single_f1": [
+     -0.06666666666666665,
+     -0.4,
+     0.2666666666666667
+    ],
+    "full_minus_single_f1": [
+     -0.11666666666666667,
+     -0.3666666666666667,
+     0.1
+    ],
+    "missing": 0,
+    "in_tokens": 1923.5
+   },
+   "cost": {
+    "full": {
+     "in_tokens_per_run": 2633.0,
+     "out_tokens_per_run": 160.56666666666666,
+     "gen_seconds_per_run": 10.339889146690258,
+     "unique_calls_per_q": 6.9,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 2,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "evidence_only": {
+     "in_tokens_per_run": 2625.0333333333333,
+     "out_tokens_per_run": 159.43333333333334,
+     "gen_seconds_per_run": 10.265791199992721,
+     "unique_calls_per_q": 7.0,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 2,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "isolation": {
+     "in_tokens_per_run": 2592.5,
+     "out_tokens_per_run": 164.7,
+     "gen_seconds_per_run": 10.583679230010603,
+     "unique_calls_per_q": 3.0,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 3,
+     "missing_final": 0,
+     "over_budget": 0
+    }
+   }
+  },
+  "musique": {
+   "n_questions": 5,
+   "policies": {
+    "full": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.2,
+       "b_first": 0.0,
+       "both_captured": 0.2
+      },
+      "sched_avg": [
+       0.13333333333333333,
+       0.0,
+       0.4
+      ],
+      "worst_schedule": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "best_schedule": 0.2
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.38666666666666666,
+       "b_first": 0.0,
+       "both_captured": 0.2
+      },
+      "sched_avg": [
+       0.19555555555555554,
+       0.0,
+       0.4622222222222222
+      ],
+      "worst_schedule": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "best_schedule": 0.38666666666666666
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.6533333333333333,
+       "b_first": 0.5666666666666667,
+       "both_captured": 0.5
+      },
+      "sched_avg": [
+       0.5733333333333333,
+       0.3511111111111111,
+       0.8222222222222222
+      ],
+      "worst_schedule": [
+       0.4,
+       0.06666666666666667,
+       0.7333333333333333
+      ],
+      "best_schedule": 0.72
+     },
+     "disagreement": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "em_instability": [
+      0.2,
+      0.0,
+      0.6
+     ]
+    },
+    "evidence_only": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.2,
+       "b_first": 0.0,
+       "both_captured": 0.2
+      },
+      "sched_avg": [
+       0.13333333333333333,
+       0.0,
+       0.4
+      ],
+      "worst_schedule": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "best_schedule": 0.2
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.38666666666666666,
+       "b_first": 0.0,
+       "both_captured": 0.2
+      },
+      "sched_avg": [
+       0.19555555555555554,
+       0.0,
+       0.4622222222222222
+      ],
+      "worst_schedule": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "best_schedule": 0.38666666666666666
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.6866666666666666,
+       "b_first": 0.5333333333333333,
+       "both_captured": 0.5
+      },
+      "sched_avg": [
+       0.5733333333333334,
+       0.42444444444444446,
+       0.7511111111111111
+      ],
+      "worst_schedule": [
+       0.4333333333333333,
+       0.2,
+       0.6333333333333332
+      ],
+      "best_schedule": 0.6866666666666666
+     },
+     "disagreement": [
+      0.8,
+      0.4,
+      1.0
+     ],
+     "em_instability": [
+      0.2,
+      0.0,
+      0.6
+     ]
+    },
+    "isolation": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.2,
+       "b_first": 0.2,
+       "both_captured": 0.2
+      },
+      "sched_avg": [
+       0.2,
+       0.0,
+       0.6
+      ],
+      "worst_schedule": [
+       0.2,
+       0.0,
+       0.6
+      ],
+      "best_schedule": 0.2
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.2,
+       "b_first": 0.2,
+       "both_captured": 0.2
+      },
+      "sched_avg": [
+       0.2,
+       0.0,
+       0.6
+      ],
+      "worst_schedule": [
+       0.2,
+       0.0,
+       0.6
+      ],
+      "best_schedule": 0.2
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.5,
+       "b_first": 0.5,
+       "both_captured": 0.5
+      },
+      "sched_avg": [
+       0.5,
+       0.2,
+       0.7999999999999999
+      ],
+      "worst_schedule": [
+       0.5,
+       0.2,
+       0.7999999999999999
+      ],
+      "best_schedule": 0.5
+     },
+     "disagreement": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "em_instability": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "paired": {
+    "full-isolation": {
+     "f1": [
+      -0.0044444444444444505,
+      -0.2,
+      0.18666666666666668
+     ],
+     "em": [
+      -0.06666666666666668,
+      -0.2,
+      0.0
+     ],
+     "worst_f1": [
+      -0.2,
+      -0.6,
+      0.0
+     ],
+     "disagreement": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    "evidence_only-isolation": {
+     "f1": [
+      -0.0044444444444444505,
+      -0.2,
+      0.18666666666666668
+     ],
+     "em": [
+      -0.06666666666666668,
+      -0.2,
+      0.0
+     ],
+     "worst_f1": [
+      -0.2,
+      -0.6,
+      0.0
+     ],
+     "disagreement": [
+      0.8,
+      0.4,
+      1.0
+     ]
+    },
+    "full-evidence_only": {
+     "f1": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "em": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "worst_f1": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "disagreement": [
+      0.2,
+      0.0,
+      0.6
+     ]
+    }
+   },
+   "flips_vs_no_peer": {
+    "full/a_first": {
+     "gain": 0,
+     "loss": 0,
+     "f1_delta": [
+      0.18666666666666668,
+      0.0,
+      0.5599999999999999
+     ]
+    },
+    "full/b_first": {
+     "gain": 0,
+     "loss": 1,
+     "f1_delta": [
+      -0.2,
+      -0.6,
+      0.0
+     ]
+    },
+    "evidence_only/a_first": {
+     "gain": 0,
+     "loss": 0,
+     "f1_delta": [
+      0.18666666666666668,
+      0.0,
+      0.5599999999999999
+     ]
+    },
+    "evidence_only/b_first": {
+     "gain": 0,
+     "loss": 1,
+     "f1_delta": [
+      -0.2,
+      -0.6,
+      0.0
+     ]
+    }
+   },
+   "irrelevant": {
+    "f1_sched_avg": [
+     0.19555555555555554,
+     0.0,
+     0.4622222222222222
+    ],
+    "per_schedule": {
+     "a_first": 0.2,
+     "b_first": 0.18666666666666668,
+     "both_captured": 0.2
+    },
+    "disagreement": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "em_instability": [
+     0.2,
+     0.0,
+     0.6
+    ],
+    "full_minus_irrelevant_disagreement": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "full_minus_irrelevant_f1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "irrelevant_minus_isolation_f1": [
+     -0.0044444444444444505,
+     -0.2,
+     0.18666666666666668
+    ]
+   },
+   "analyst_influence": {
+    "full": {
+     "changed": [
+      0.7,
+      0.3,
+      1.0
+     ],
+     "adopted": [
+      0.3,
+      0.0,
+      0.7
+     ]
+    },
+    "evidence_only": {
+     "changed": [
+      0.4,
+      0.2,
+      0.5
+     ],
+     "adopted": [
+      0.2,
+      0.0,
+      0.4
+     ]
+    },
+    "irrelevant": {
+     "changed": [
+      0.6,
+      0.3,
+      0.9
+     ],
+     "adopted": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "adoption_full_minus_evidence_only": [
+     0.1,
+     0.0,
+     0.3
+    ],
+    "changed_full_minus_irrelevant": [
+     0.1,
+     -0.4,
+     0.6
+    ]
+   },
+   "single_agent": {
+    "em": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "f1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "sp_f1": [
+     0.4666666666666666,
+     0.13333333333333333,
+     0.7999999999999999
+    ],
+    "isolation_minus_single_f1": [
+     0.2,
+     0.0,
+     0.6
+    ],
+    "full_minus_single_f1": [
+     0.19555555555555554,
+     0.0,
+     0.4622222222222222
+    ],
+    "missing": 0,
+    "in_tokens": 2514.6
+   },
+   "cost": {
+    "full": {
+     "in_tokens_per_run": 3194.9333333333334,
+     "out_tokens_per_run": 137.93333333333334,
+     "gen_seconds_per_run": 9.642906993348152,
+     "unique_calls_per_q": 7.0,
+     "invalid_reports": 1,
+     "analyst_calls": 30,
+     "findings_missing_ids": 2,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "evidence_only": {
+     "in_tokens_per_run": 3188.866666666667,
+     "out_tokens_per_run": 140.93333333333334,
+     "gen_seconds_per_run": 9.973738060030154,
+     "unique_calls_per_q": 7.0,
+     "invalid_reports": 1,
+     "analyst_calls": 30,
+     "findings_missing_ids": 2,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "isolation": {
+     "in_tokens_per_run": 3153.4,
+     "out_tokens_per_run": 129.6,
+     "gen_seconds_per_run": 9.440121340029872,
+     "unique_calls_per_q": 3.0,
+     "invalid_reports": 0,
+     "analyst_calls": 30,
+     "findings_missing_ids": 3,
+     "missing_final": 0,
+     "over_budget": 0
+    }
+   }
+  },
+  "2wiki": {
+   "n_questions": 10,
+   "policies": {
+    "full": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.5,
+       "b_first": 0.4,
+       "both_captured": 0.4
+      },
+      "sched_avg": [
+       0.4333333333333333,
+       0.13333333333333333,
+       0.7333333333333333
+      ],
+      "worst_schedule": [
+       0.4,
+       0.1,
+       0.7
+      ],
+      "best_schedule": 0.5
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.5666666666666667,
+       "b_first": 0.5000000000000001,
+       "both_captured": 0.4666666666666667
+      },
+      "sched_avg": [
+       0.5111111111111112,
+       0.24444444444444446,
+       0.7777777777777778
+      ],
+      "worst_schedule": [
+       0.4666666666666667,
+       0.16666666666666666,
+       0.7666666666666666
+      ],
+      "best_schedule": 0.6000000000000001
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.5333333333333333,
+       "b_first": 0.5466666666666666,
+       "both_captured": 0.5416666666666666
+      },
+      "sched_avg": [
+       0.5405555555555555,
+       0.37222222222222223,
+       0.7005555555555556
+      ],
+      "worst_schedule": [
+       0.4416666666666666,
+       0.26666666666666666,
+       0.6166666666666666
+      ],
+      "best_schedule": 0.6133333333333334
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.36666666666666664,
+       "b_first": 0.28,
+       "both_captured": 0.2833333333333333
+      },
+      "sched_avg": [
+       0.31,
+       0.12666666666666665,
+       0.5244444444444444
+      ],
+      "worst_schedule": [
+       0.23333333333333334,
+       0.05,
+       0.45
+      ],
+      "best_schedule": 0.39666666666666667
+     },
+     "disagreement": [
+      0.2,
+      0.0,
+      0.5
+     ],
+     "em_instability": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "evidence_only": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.5,
+       "b_first": 0.4,
+       "both_captured": 0.4
+      },
+      "sched_avg": [
+       0.4333333333333333,
+       0.13333333333333333,
+       0.7333333333333333
+      ],
+      "worst_schedule": [
+       0.4,
+       0.1,
+       0.7
+      ],
+      "best_schedule": 0.5
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.5666666666666667,
+       "b_first": 0.4666666666666667,
+       "both_captured": 0.4666666666666667
+      },
+      "sched_avg": [
+       0.5,
+       0.2333333333333333,
+       0.7666666666666667
+      ],
+      "worst_schedule": [
+       0.4666666666666667,
+       0.2,
+       0.7666666666666666
+      ],
+      "best_schedule": 0.5666666666666667
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.5233333333333333,
+       "b_first": 0.5688888888888889,
+       "both_captured": 0.5416666666666666
+      },
+      "sched_avg": [
+       0.5446296296296296,
+       0.3751805555555556,
+       0.7038888888888888
+      ],
+      "worst_schedule": [
+       0.43166666666666664,
+       0.2532916666666667,
+       0.6066666666666667
+      ],
+      "best_schedule": 0.6355555555555557
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.35666666666666663,
+       "b_first": 0.2633333333333333,
+       "both_captured": 0.2833333333333333
+      },
+      "sched_avg": [
+       0.30111111111111105,
+       0.11333333333333333,
+       0.5122222222222221
+      ],
+      "worst_schedule": [
+       0.23333333333333334,
+       0.05,
+       0.45
+      ],
+      "best_schedule": 0.37
+     },
+     "disagreement": [
+      0.3,
+      0.0,
+      0.6
+     ],
+     "em_instability": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "isolation": {
+     "em": {
+      "per_schedule": {
+       "a_first": 0.4,
+       "b_first": 0.4,
+       "both_captured": 0.4
+      },
+      "sched_avg": [
+       0.4,
+       0.1,
+       0.7
+      ],
+      "worst_schedule": [
+       0.4,
+       0.1,
+       0.7
+      ],
+      "best_schedule": 0.4
+     },
+     "f1": {
+      "per_schedule": {
+       "a_first": 0.4666666666666667,
+       "b_first": 0.4666666666666667,
+       "both_captured": 0.4666666666666667
+      },
+      "sched_avg": [
+       0.4666666666666667,
+       0.16666666666666666,
+       0.7666666666666666
+      ],
+      "worst_schedule": [
+       0.4666666666666667,
+       0.16666666666666666,
+       0.7666666666666666
+      ],
+      "best_schedule": 0.4666666666666667
+     },
+     "sp_f1": {
+      "per_schedule": {
+       "a_first": 0.5416666666666666,
+       "b_first": 0.5416666666666666,
+       "both_captured": 0.5416666666666666
+      },
+      "sched_avg": [
+       0.5416666666666666,
+       0.36666666666666664,
+       0.7166666666666666
+      ],
+      "worst_schedule": [
+       0.5416666666666666,
+       0.36666666666666664,
+       0.7166666666666666
+      ],
+      "best_schedule": 0.5416666666666666
+     },
+     "joint_f1": {
+      "per_schedule": {
+       "a_first": 0.2833333333333333,
+       "b_first": 0.2833333333333333,
+       "both_captured": 0.2833333333333333
+      },
+      "sched_avg": [
+       0.2833333333333333,
+       0.1,
+       0.483749999999994
+      ],
+      "worst_schedule": [
+       0.2833333333333333,
+       0.1,
+       0.5
+      ],
+      "best_schedule": 0.2833333333333333
+     },
+     "disagreement": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "em_instability": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "paired": {
+    "full-isolation": {
+     "f1": [
+      0.04444444444444444,
+      0.0,
+      0.1222222222222222
+     ],
+     "em": [
+      0.03333333333333333,
+      0.0,
+      0.1
+     ],
+     "worst_f1": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "disagreement": [
+      0.2,
+      0.0,
+      0.5
+     ]
+    },
+    "evidence_only-isolation": {
+     "f1": [
+      0.03333333333333333,
+      0.0,
+      0.1
+     ],
+     "em": [
+      0.03333333333333333,
+      0.0,
+      0.1
+     ],
+     "worst_f1": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "disagreement": [
+      0.3,
+      0.0,
+      0.6
+     ]
+    },
+    "full-evidence_only": {
+     "f1": [
+      0.01111111111111111,
+      0.0,
+      0.03333333333333333
+     ],
+     "em": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "worst_f1": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "disagreement": [
+      -0.1,
+      -0.3,
+      0.0
+     ]
+    }
+   },
+   "flips_vs_no_peer": {
+    "full/a_first": {
+     "gain": 1,
+     "loss": 0,
+     "f1_delta": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "full/b_first": {
+     "gain": 0,
+     "loss": 0,
+     "f1_delta": [
+      0.03333333333333333,
+      0.0,
+      0.1
+     ]
+    },
+    "evidence_only/a_first": {
+     "gain": 1,
+     "loss": 0,
+     "f1_delta": [
+      0.1,
+      0.0,
+      0.3
+     ]
+    },
+    "evidence_only/b_first": {
+     "gain": 0,
+     "loss": 0,
+     "f1_delta": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "irrelevant": {
+    "f1_sched_avg": [
+     0.4666666666666667,
+     0.16666666666666666,
+     0.7666666666666666
+    ],
+    "per_schedule": {
+     "a_first": 0.4666666666666667,
+     "b_first": 0.4666666666666667,
+     "both_captured": 0.4666666666666667
+    },
+    "disagreement": [
+     0.2,
+     0.0,
+     0.5
+    ],
+    "em_instability": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "full_minus_irrelevant_disagreement": [
+     0.0,
+     -0.3,
+     0.3
+    ],
+    "full_minus_irrelevant_f1": [
+     0.04444444444444444,
+     0.0,
+     0.11111111111111112
+    ],
+    "irrelevant_minus_isolation_f1": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "analyst_influence": {
+    "full": {
+     "changed": [
+      0.35,
+      0.15,
+      0.55
+     ],
+     "adopted": [
+      0.2,
+      0.05,
+      0.35
+     ]
+    },
+    "evidence_only": {
+     "changed": [
+      0.25,
+      0.05,
+      0.45
+     ],
+     "adopted": [
+      0.1,
+      0.0,
+      0.25
+     ]
+    },
+    "irrelevant": {
+     "changed": [
+      0.3,
+      0.1,
+      0.5
+     ],
+     "adopted": [
+      0.15,
+      0.0,
+      0.3
+     ]
+    },
+    "adoption_full_minus_evidence_only": [
+     0.1,
+     0.0,
+     0.25
+    ],
+    "changed_full_minus_irrelevant": [
+     0.05,
+     -0.25,
+     0.3
+    ]
+   },
+   "single_agent": {
+    "em": [
+     0.6,
+     0.3,
+     0.9
+    ],
+    "f1": [
+     0.6,
+     0.3,
+     0.9
+    ],
+    "sp_f1": [
+     0.5466666666666666,
+     0.29999999999999993,
+     0.7733333333333333
+    ],
+    "isolation_minus_single_f1": [
+     -0.13333333333333336,
+     -0.3666666666666667,
+     0.0
+    ],
+    "full_minus_single_f1": [
+     -0.08888888888888889,
+     -0.2333333333333334,
+     0.02222222222222222
+    ],
+    "missing": 0,
+    "in_tokens": 1044.7
+   },
+   "cost": {
+    "full": {
+     "in_tokens_per_run": 1737.4666666666667,
+     "out_tokens_per_run": 151.46666666666667,
+     "gen_seconds_per_run": 9.30007623664181,
+     "unique_calls_per_q": 6.9,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 5,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "evidence_only": {
+     "in_tokens_per_run": 1730.1,
+     "out_tokens_per_run": 150.7,
+     "gen_seconds_per_run": 9.23659742330589,
+     "unique_calls_per_q": 6.9,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 5,
+     "missing_final": 0,
+     "over_budget": 0
+    },
+    "isolation": {
+     "in_tokens_per_run": 1697.5,
+     "out_tokens_per_run": 150.8,
+     "gen_seconds_per_run": 9.240513419965282,
+     "unique_calls_per_q": 3.0,
+     "invalid_reports": 0,
+     "analyst_calls": 60,
+     "findings_missing_ids": 6,
+     "missing_final": 0,
+     "over_budget": 0
+    }
+   }
+  }
+ }
+}

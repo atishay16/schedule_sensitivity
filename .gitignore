@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+.pytest_cache/
+tools/
+
+# raw datasets (download separately; checksums are kept)
+data/raw/*
+!data/raw/SHA256SUMS
+
+# run logs are committed gzip-compressed; raw copies, response caches and
+# console output stay local
+runs/**/*.jsonl
+runs/logs/*.log
+results/pilot/test_root/
+
+# LaTeX build by-products and scratch
+paper/*.log
+paper/*.blg
+paper/*.aux
+paper/*.bbl
+paper/_figtest/
