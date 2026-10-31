@@ -26,9 +26,8 @@ Conditions:
 | `scripts/run.py` | Resumable JSONL runner (`--mode workflow|single`, `--policies`, `--no-reuse`) |
 | `scripts/run_queue.sh` | Runs every stage for both models in order |
 | `scripts/analyze.py` | Paired question-level bootstrap analysis -> `results/summary.json` |
-| `scripts/make_tables.py`, `scripts/figures.py` | Paper tables and figure, generated from the summary |
+| `scripts/make_tables.py`, `scripts/figures.py` | LaTeX tables and figure, generated from the summary (written to `paper/`) |
 | `scripts/verify_repro.py` | Re-executes logged conditions and checks byte-identical outputs |
-| `paper/` | LaTeX source (IEEEtran), generated tables/figures, `overleaf_upload.zip` |
 | `third_party/` | Official HotpotQA, MuSiQue and 2Wiki metric code (unchanged, with licenses) |
 
 ## Reproduce
@@ -54,9 +53,6 @@ bash scripts/run_queue.sh main          # about 37 h on one 8 GB RTX 3070 laptop
 .venv/Scripts/python scripts/make_tables.py
 .venv/Scripts/python scripts/figures.py
 ```
-
-Build the paper with `tools/tectonic/tectonic.exe -X compile paper/main.tex`, or
-upload `paper/overleaf_upload.zip` to Overleaf (pdfLaTeX works).
 
 HotpotQA and MuSiQue are fetched from the Hugging Face mirrors
 (`hotpotqa/hotpot_qa`, distractor config; `dgslibisey/MuSiQue`). 2WikiMultiHopQA

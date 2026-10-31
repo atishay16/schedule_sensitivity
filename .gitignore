@@ -19,3 +19,6 @@ paper/*.blg
 paper/*.aux
 paper/*.bbl
 paper/_figtest/
+
+# paper source and PDF are kept local (not published)
+paper/
