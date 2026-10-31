@@ -56,7 +56,7 @@ def main():
         ax.grid(axis="y", color=GRID, linewidth=0.5, zorder=0)
         ax.spines[["top", "right"]].set_visible(False)
         ax.set_ylim(0, 100)
-    axes[0].set_ylabel("Schedule disagreement (%)")
+    axes[0].set_ylabel("Disagreement (%)")
     fig.legend(*axes[0].get_legend_handles_labels(), loc="lower center", ncol=3, frameon=False,
                fontsize=6.5, bbox_to_anchor=(0.5, -0.02), handlelength=1.4, columnspacing=0.8)
     fig.tight_layout(rect=(0, 0.09, 1, 1))

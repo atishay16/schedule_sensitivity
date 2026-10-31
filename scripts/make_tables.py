@@ -62,7 +62,7 @@ def main_table(S):
         if i < len(rows) - 1:
             body.append(r"\cmidrule(lr){2-10}" if i % 3 != 2 else r"\midrule")
     return wrap(body,
-                r"Answer quality and schedule sensitivity. Quality is averaged over the three schedules within each question; brackets are 95\% question-level bootstrap intervals. Worst/Best: mean over questions of the minimum/maximum F1 across schedules. Dis.: questions with $\geq$2 distinct normalized final answers across schedules. Inst.: questions correct (EM) under one schedule and wrong under another.",
+                r"Answer quality and schedule sensitivity. Scores are averaged over the three run orders of each question; brackets are 95\% bootstrap confidence intervals. Worst/Best: lowest/highest F1 over the three orders, averaged over questions. Dis.: questions whose final answer is not the same in all three orders. Inst.: questions answered correctly (EM) in one order and incorrectly in another.",
                 "tab:main", "lllccccccc", wide=True)
 
 
@@ -78,12 +78,12 @@ def paired_table(S):
                     f"{pm(P['full-isolation']['worst_f1'])} & {pm(P['full-evidence_only']['disagreement'])} \\\\")
         if i == 2:
             body.append(r"\midrule")
-    return wrap(body, r"Paired policy differences (points; 95\% question-level bootstrap intervals). F1 is averaged over schedules within each question before differencing; worst F1 is each question's minimum over schedules. The last column compares schedule disagreement under full and evidence-only sharing.",
+    return wrap(body, r"Differences between settings, computed question by question (points; 95\% bootstrap confidence intervals). F1 is averaged over the three run orders first; worst F1 is each question's lowest F1 over the orders. The last column compares disagreement under full and evidence-only sharing.",
                 "tab:paired", "llcccc")
 
 
 def control_table(S):
-    body = [r"Model & Data & \multicolumn{3}{c}{Schedule disagreement (\%)} & \multicolumn{2}{c}{Changed (\%)} & \multicolumn{3}{c}{Adopted (\%)} \\",
+    body = [r"Model & Data & \multicolumn{3}{c}{Disagreement (\%)} & \multicolumn{2}{c}{Changed (\%)} & \multicolumn{3}{c}{Adopted (\%)} \\",
             r"\cmidrule(lr){3-5}\cmidrule(lr){6-7}\cmidrule(lr){8-10}",
             r" & & Full & Irr. & Full$-$Irr. & Full & Irr. & Full & Evid. & Irr. \\", r"\midrule"]
     rows = list(cells(S))
@@ -98,14 +98,14 @@ def control_table(S):
                     f"{p(A['full']['adopted'][0])} & {p(A['evidence_only']['adopted'][0])} & {p(A['irrelevant']['adopted'][0])} \\\\")
         if i == 2:
             body.append(r"\midrule")
-    return wrap(body, r"Peer content versus peer presence. Irr.: the later analyst is shown a real report written for a different question, with the same timing as full sharing. Changed: the later analyst's provisional answer differs from its no-peer answer. Adopted: it switches to the answer in the report it was shown. Rates are over the two peer-visible schedules; brackets are 95\% question-level bootstrap intervals.",
+    return wrap(body, r"Peer content versus peer presence. Irr.: the later analyst is shown a real report written for a different question, with the same timing as full sharing. Changed: the later analyst's tentative answer differs from the one it gives without a peer. Adopted: it switches to the answer in the report it was shown. Rates cover A-first and B-first; brackets are 95\% bootstrap confidence intervals.",
                 "tab:control", "llcccccccc", wide=True)
 
 
 def baseline_table(S):
     body = [r" & & \multicolumn{3}{c}{Answer F1} & \multicolumn{2}{c}{Repeat subset (\%)} \\",
             r"\cmidrule(lr){3-5}\cmidrule(lr){6-7}",
-            r"Model & Data & Single & Iso. & Iso.$-$Single & Repeat diff. & Cross-sched.\ Dis. \\", r"\midrule"]
+            r"Model & Data & Single & Iso. & Iso.$-$Single & Repeat diff. & Across orders \\", r"\midrule"]
     rows = list(cells(S))
     for i, (mk, mn, dk, dn, R) in enumerate(rows):
         if "single_agent" not in R:
@@ -119,7 +119,7 @@ def baseline_table(S):
                     f"{pm(sa['isolation_minus_single_f1'])} & {rep_cells} \\\\")
         if i == 2:
             body.append(r"\midrule")
-    return wrap(body, r"Reference points. Single: one call reading all evidence. Iso.: the two-analyst workflow under isolation. Repeat diff.: share of calls whose raw output differed when an identical condition was re-executed without response reuse (number of calls in parentheses), versus cross-schedule disagreement on the same questions.",
+    return wrap(body, r"Reference points. Single: one model call that reads all the evidence. Iso.: the two-analyst workflow with isolation. Repeat diff.: share of calls whose output changed when the same run was repeated (number of calls in parentheses), compared with disagreement across run orders on the same questions.",
                 "tab:baseline", "llccccc")
 
 
