@@ -161,6 +161,8 @@ def analyze_cell(main, irr, single, rep, qids, rng) -> dict:
         dis_i = gi.disagree("irrelevant")
         out["irrelevant"] = {
             "f1_sched_avg": boot_ci(f1_i.mean(1), rng),
+            "best_schedule": float(f1_i.max(1).mean()),
+            "worst_schedule": float(f1_i.min(1).mean()),
             "per_schedule": {s: float(f1_i[:, si].mean()) for si, s in enumerate(SCHEDS)},
             "disagreement": boot_ci(dis_i, rng),
             "em_instability": boot_ci(((em_i.max(1) == 1) & (em_i.min(1) == 0)).astype(float), rng),
