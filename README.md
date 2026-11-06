@@ -1,4 +1,4 @@
-# Schedule Sensitivity in Shared-State Multi-Agent LLM Systems: Separating Peer Presence from Peer Content
+# Schedule Sensitivity in Shared-State Multi-Agent LLM Systems: Testing Peer Presence Against Peer Content
 
 Controlled measurement of how context-capture order and peer-report visibility
 affect a two-analyst + orchestrator workflow. Two models (Llama-3-8B-Instruct and

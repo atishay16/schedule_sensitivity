@@ -62,7 +62,7 @@ def main_table(S):
         if i < len(rows) - 1:
             body.append(r"\cmidrule(lr){2-10}" if i % 3 != 2 else r"\midrule")
     return wrap(body,
-                r"Answer quality and schedule sensitivity. Scores are averaged over the three run orders of each question; brackets are 95\% bootstrap confidence intervals. Worst/Best: lowest/highest F1 over the three orders, averaged over questions. Dis.: questions whose final answer is not the same in all three orders. Inst.: questions answered correctly (EM) in one order and incorrectly in another.",
+                r"Quality and stability, averaged over the three run orders (brackets: 95\% CIs). Worst/Best: lowest/highest F1 over the orders. Dis.: disagreement. Inst.: correctness instability.",
                 "tab:main", "lllccccccc", wide=True)
 
 
@@ -78,7 +78,7 @@ def paired_table(S):
                     f"{pm(P['full-isolation']['worst_f1'])} & {pm(P['full-evidence_only']['disagreement'])} \\\\")
         if i == 2:
             body.append(r"\midrule")
-    return wrap(body, r"Differences between settings, computed question by question (points; 95\% bootstrap confidence intervals). F1 is averaged over the three run orders first; worst F1 is each question's lowest F1 over the orders. The last column compares disagreement under full and evidence-only sharing.",
+    return wrap(body, r"Paired differences between settings (points; 95\% CIs).",
                 "tab:paired", "llcccc")
 
 
@@ -98,7 +98,7 @@ def control_table(S):
                     f"{p(A['full']['adopted'][0])} & {p(A['evidence_only']['adopted'][0])} & {p(A['irrelevant']['adopted'][0])} \\\\")
         if i == 2:
             body.append(r"\midrule")
-    return wrap(body, r"Peer content versus peer presence. Irr.: the later analyst is shown a real report written for a different question, with the same timing as full sharing. Changed: the later analyst's tentative answer differs from the one it gives without a peer. Adopted: it switches to the answer in the report it was shown. Rates cover A-first and B-first; brackets are 95\% bootstrap confidence intervals.",
+    return wrap(body, r"Peer content versus presence (95\% CIs). Irr.: irrelevant-peer control. Changed and Adopted: later analyst, over A-first and B-first.",
                 "tab:control", "llcccccccc", wide=True)
 
 
@@ -119,7 +119,7 @@ def baseline_table(S):
                     f"{pm(sa['isolation_minus_single_f1'])} & {rep_cells} \\\\")
         if i == 2:
             body.append(r"\midrule")
-    return wrap(body, r"Reference points. Single: one model call that reads all the evidence. Iso.: the two-analyst workflow with isolation. Repeat diff.: share of calls whose output changed when the same run was repeated (number of calls in parentheses), compared with disagreement across run orders on the same questions.",
+    return wrap(body, r"Single-agent baseline and repeat test. Repeat diff.: calls whose output changed on repeat (number of calls in parentheses).",
                 "tab:baseline", "llccccc")
 
 
